@@ -1,16 +1,16 @@
-package com.example.pinclassrooom.ui.home;
+package com.example.pinclassrooom.ui.docentes;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class HomeViewModel extends ViewModel {
+public class DocentesViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public HomeViewModel() {
+    public DocentesViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is home fragment");
+        mText.setValue("This is slideshow fragment");
     }
 
     public LiveData<String> getText() {

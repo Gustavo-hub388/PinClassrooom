@@ -1,4 +1,4 @@
-package com.example.pinclassrooom.ui.send;
+package com.example.pinclassrooom.ui.docentes;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,17 +14,17 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.pinclassrooom.R;
 
-public class SendFragment extends Fragment {
+public class DocentesFragment extends Fragment {
 
-    private SendViewModel sendViewModel;
+    private DocentesViewModel docentesViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        sendViewModel =
-                ViewModelProviders.of(this).get(SendViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_send, container, false);
-        final TextView textView = root.findViewById(R.id.text_send);
-        sendViewModel.getText().observe(this, new Observer<String>() {
+        docentesViewModel =
+                ViewModelProviders.of(this).get(DocentesViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_docentes, container, false);
+        final TextView textView = root.findViewById(R.id.text_slideshow);
+        docentesViewModel.getText().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);

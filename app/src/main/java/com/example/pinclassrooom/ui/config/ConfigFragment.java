@@ -1,4 +1,4 @@
-package com.example.pinclassrooom.ui.tools;
+package com.example.pinclassrooom.ui.config;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,17 +14,17 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.pinclassrooom.R;
 
-public class ToolsFragment extends Fragment {
+public class ConfigFragment extends Fragment {
 
-    private ToolsViewModel toolsViewModel;
+    private ConfigViewModel configViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        toolsViewModel =
-                ViewModelProviders.of(this).get(ToolsViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_tools, container, false);
-        final TextView textView = root.findViewById(R.id.text_tools);
-        toolsViewModel.getText().observe(this, new Observer<String>() {
+        configViewModel =
+                ViewModelProviders.of(this).get(ConfigViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_config, container, false);
+        final TextView textView = root.findViewById(R.id.text_share);
+        configViewModel.getText().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);

@@ -1,16 +1,16 @@
-package com.example.pinclassrooom.ui.gallery;
+package com.example.pinclassrooom.ui.eventos;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class GalleryViewModel extends ViewModel {
+public class EventosViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public GalleryViewModel() {
+    public EventosViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is gallery fragment");
+        mText.setValue("This is tools fragment");
     }
 
     public LiveData<String> getText() {

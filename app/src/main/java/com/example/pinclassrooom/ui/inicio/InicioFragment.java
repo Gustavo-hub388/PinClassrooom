@@ -1,4 +1,4 @@
-package com.example.pinclassrooom.ui.slideshow;
+package com.example.pinclassrooom.ui.inicio;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,17 +14,17 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.pinclassrooom.R;
 
-public class SlideshowFragment extends Fragment {
+public class InicioFragment extends Fragment {
 
-    private SlideshowViewModel slideshowViewModel;
+    private InicioViewModel inicioViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        slideshowViewModel =
-                ViewModelProviders.of(this).get(SlideshowViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_slideshow, container, false);
-        final TextView textView = root.findViewById(R.id.text_slideshow);
-        slideshowViewModel.getText().observe(this, new Observer<String>() {
+        inicioViewModel =
+                ViewModelProviders.of(this).get(InicioViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_inicio, container, false);
+        final TextView textView = root.findViewById(R.id.text_home);
+        inicioViewModel.getText().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
